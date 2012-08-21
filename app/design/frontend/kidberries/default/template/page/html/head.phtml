@@ -1,0 +1,281 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php 
+  # Current currency & currency symbol
+  Mage::register( '_currentCurrency', Mage::app()->getLocale()->currency( Mage::app()->getStore()->getCurrentCurrencyCode() )->getSymbol() );
+  Mage::register( '_currentCurrencySymbol', substr( Mage::registry('_currentCurrency' ), 0, 6) );
+?>
+
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/jquery-1.6.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon-yui.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon-fonts.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/cufon-replace.js') ?>"></script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/kidberries-app.js') ?>"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function(){
+		jQuery('.header .links li').each(function(index){
+			jQuery(this).addClass('link-'+(index+1));
+		});		
+		jQuery('.footer li').each(function(index){
+			jQuery(this).addClass('link-'+(index+1));
+		});
+	});	
+</script>
+<script type="text/javascript" src="<?php echo $this->getSkinUrl('js/imagepreloader.js') ?>"></script>
+<script type="text/javascript">
+	preloadImages([
+		'<?php echo $this->getSkinUrl('images/menu_button_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_2_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_2_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_2_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_3_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_3_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_3_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_4_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_4_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_4_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_5_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_5_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_5_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_6_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_6_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_6_corner_right_active.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/menu_button_7_bg_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_7_corner_left_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/menu_button_7_corner_right_active.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_1_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_1_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_2_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_2_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_3_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_3_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_4_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_4_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_5_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_5_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_6_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_6_top_bg.png') ?>',		
+		'<?php echo $this->getSkinUrl('images/sub_menu_7_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/sub_menu_7_top_bg.png') ?>',
+		'<?php echo $this->getSkinUrl('images/list_button_active.png') ?>'
+		]);
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<!--[if lt IE 7]>
+<div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;'> 
+	<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" height="42" width="820" alt="" /></a>
+</div> 
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+<?php 	
+	function main_block($main_blockPart){	
+			 switch ($main_blockPart){
+					case 'top':
+						echo '<div class="main-block skew-block">
+								<div class="corners-top"><div><div>&nbsp;</div></div></div>       
+									<div class="content-box">
+										<div class="border-bot">
+											<div class="border-left">
+												<div class="border-right">
+													<div class="corner-left-top">
+														<div class="corner-right-top">
+															<div class="corner-left-bot">
+																<div class="corner-right-bot">';
+						break;
+										
+					case 'bottom':
+							echo 								'</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>                
+									</div>
+									<div class="corners-bot"><div><div>&nbsp;</div></div></div>
+								</div>';				 
+						break;	
+								
+					default:
+						break;
+				}
+		}
+	function main_block2($main_block2Part){	
+			 switch ($main_block2Part){
+					case 'top':
+						echo '<div class="main-block-2 skew-block">
+								<div class="corners-top"><div><div>&nbsp;</div></div></div>       
+									<div class="content-box">
+										<div class="border-bot">
+											<div class="border-left">
+												<div class="border-right">
+													<div class="corner-left-top">
+														<div class="corner-right-top">
+															<div class="corner-left-bot">
+																<div class="corner-right-bot">';
+						break;
+										
+					case 'bottom':
+							echo 								'</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>                
+									</div>
+									<div class="corners-bot"><div><div>&nbsp;</div></div></div>
+								</div>';				 
+						break;	
+								
+					default:
+						break;
+				}
+		}
+	function sideblock_1($sideblock_1Part){	
+			 switch ($sideblock_1Part){
+					case 'top':
+						echo '<div class="sideblock-1 skew-block">
+								<div class="top-corner"></div>
+								<div class="content-box">
+									<div class="bot-bg">
+										<div class="left-bg">
+											<div class="right-bg">
+												<div class="left-top">
+													<div class="right-top">
+														<div class="left-bot">
+															<div class="right-bot">
+																<div class="ie-fix">';
+						break;
+										
+					case 'bottom':
+						echo 									'</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bot-corner"></div>
+							</div>';				 
+						break;	
+								
+					default:
+						break;
+				}
+		}
+	function sideblock_2($sideblock_2Part){	
+			 switch ($sideblock_2Part){
+					case 'top':
+						echo '<div class="sideblock-2 skew-block">
+								<div class="top-corner"></div>
+								<div class="content-box">
+									<div class="bot-bg">
+										<div class="left-bg">
+											<div class="right-bg">
+												<div class="left-top">
+													<div class="right-top">
+														<div class="left-bot">
+															<div class="right-bot">
+																<div class="ie-fix">';				
+						break;
+										
+					case 'bottom':
+						echo 									'</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bot-corner"></div>
+							</div>';				 
+						break;	
+								
+					default:
+						break;
+				}
+		}
+	function sideblock_3($sideblock_3Part){	
+			 switch ($sideblock_3Part){
+					case 'top':
+						echo '<div class="sideblock-3 skew-block">
+								<div class="top-corner"></div>
+								<div class="content-box">
+									<div class="bot-bg">
+										<div class="left-bg">
+											<div class="right-bg">
+												<div class="left-top">
+													<div class="right-top">
+														<div class="left-bot">
+															<div class="right-bot">
+																<div class="ie-fix">';				
+						break;
+										
+					case 'bottom':
+						echo 									'</div>
+															</div>
+														</div>	
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="bot-corner"></div>
+							</div>';				 
+						break;	
+								
+					default:
+						break;
+				}
+		}
+ ?>

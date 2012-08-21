@@ -1,0 +1,29 @@
+<?php
+/*
+ */
+?>
+
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+    $zoom_image_size = Mage::getStoreConfig('imagezoomconfig/imagezoom_style_css/img_size');
+?>
+
+<?php if ($_product->getTypeId() == 'configurable' ):?>
+<script type="text/javascript">
+  // ;
+  jQuery(document).ready(function(){
+     jQuery('#product-options-wrapper, div.product-options-bottom').hide();
+  });
+</script>
+<?php endif;?>
+
+<p class="product-image">
+  <a href="<?php echo $this->helper('catalog/image')->init($_product, 'image'); ?>" class="cloud-zoom" id="image-zoom" rel="<?php echo $this->helper('imagezoom')->getZoomConfig(); ?>">
+    <?php
+      $_img = '<img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize($zoom_image_size).'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+      echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+  </a>
+</p>
+

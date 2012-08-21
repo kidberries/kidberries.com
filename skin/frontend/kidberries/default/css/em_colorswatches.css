@@ -1,0 +1,9 @@
+.swatches-container .swatch-img,
+.swatches-container .swatch-span { margin:0 2px 2px 0; }
+
+.swatches-container .swatch-img { cursor: pointer; border: 1px solid #dddddd; }
+.swatches-container .swatch-img:hover {box-shadow: 0 0 3px blue; border: 1px solid grey;}
+.swatches-container .swatch-img.current {box-shadow: 0 0 6px blue; border: 1px solid black;}
+.swatches-container .swatch-img.current:hover {box-shadow: 0 0 6px blue; border: 1px solid black;}
+.swatches-container .swatch-img.outofstock { opacity: 0.1; }
+.swatches-container .swatch-span { }

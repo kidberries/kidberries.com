@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="kidberries-logo"
+   version="1.1"
+   width="325"
+   height="83">
+
+  <g
+    style="stroke-linejoin:round;stroke-linecap:round;fill:none;stroke:#e0e0e0;stroke-opacity:1;stroke-width:2.5;stroke-miterlimit:4;stroke-dasharray:none">
+    <g
+       transform="translate(-0.3982322,-3.1828792)">
+      <circle
+         cx="44.3"
+         cy="65.2"
+         r="19"/>
+      <circle
+         cx="83"
+         cy="65.3"
+         r="19"
+         style="fill:#901d41;fill-opacity:1;stroke:#e0e0e0;" />
+      <path
+         d="M 2.4202114,65.290277 C 14.836791,67.820498 23.003797,64.449054 28.564418,54.472611 14.821228,52.06025 5.5958026,56.863926 2.4202114,65.290277 z"/>
+      <path
+         d="M 64.65625,60.25 C 71.246613,57.65313 75.227302,52.871753 76.8125,47.40625 79.601531,59.67188 89.048248,61.538521 101.15625,59.875"/>
+      <path
+         d="m 34.71875,73.21875 c 6.409106,5.869616 13.142528,5.9443 19.25,0.03125"/>
+      <path
+         d="m 73.565429,73.307138 c 6.409106,5.869616 13.142528,5.9443 19.25,0.03125"/>
+      <path
+         style="fill:#23bb26;fill-opacity:1;stroke:#23bb26;stroke-width:0.1;"
+         d="M 27.134355,21.662109 C 40.000897,22.875616 46.389817,14.35358 49.034851,5.1228396 34.566813,4.0575056 29.799556,12.326973 27.134355,21.662109 z"/>
+      <path
+         d="M 46.138849,46.257368 C 53.221619,30.116345 53.404912,17.816913 49.070341,5.0990143 45.207644,18.930228 35.429088,22.785562 27.083333,21.698477 30.224694,10.177458 36.287017,4.1515025 49.068362,5.1009925 64.772029,11.679272 74.746362,25.471867 76.794705,47.407748"/>
+    </g>
+    <g style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#e0e0e0;fill-opacity:1;stroke:#e0e0e0;font-family:Calibri;stroke-opacity:1;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-linecap:round;stroke-linejoin:round">
+      <text
+         style="font-size:14px;"
+         xml:space="preserve"
+         x="120.80627"
+         y="49.184536">
+         <tspan
+           x="120.80627"
+           y="49.184536">Магазин для мам, пап и их деток</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:40px;"
+         x="88.345451"
+         y="28.22435">
+         <tspan
+           x="88.345451"
+           y="28.22435">Детки-ягодки</tspan></text>
+    </g>
+  </g>
+</svg>

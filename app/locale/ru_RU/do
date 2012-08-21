@@ -1,0 +1,13 @@
+#!/usr/local/bin/perl
+
+#my @f = `ls *.csv`;
+#exit;
+my $n = 0;
+
+foreach( `ls *.csv` ) {
+  $_ =~ s/\n//;
+  open( F, ">> $_" );
+  $n++;
+  print F qq("Bronse","Bronse_$n"\n);
+  close( F );
+}
