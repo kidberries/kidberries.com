@@ -24,44 +24,10 @@
  * string If specified wraps children list in div with this class
  */
 ?>
-<?php
-function getMagentoCategoriesAsFlattenArray () {
-  $categories_collection = Mage::getModel('catalog/category')->getCollection();
-  $categories_collection->addAttributeToSelect('name')->addAttributeToSelect('parent_id')->setStoreId( Mage::app()->getStore()->getId() )->load ();
-  $result = array ();
-
-  if($categories_collection->getSize()){
-    foreach($categories_collection as $category) {
-      $result [] = array (
-        "id"  => $category->getId(),
-        "parent_id" => $category->getParentId(),
-        "level" => $category->getLevel(),
-        "name" => $category->getName(),
-        "url" => $category->getUrl()
-      );
-    }
-  }
-    return $result;
-}
-?>
 
 <?php $_menu = $this->renderCategoriesMenuHtml( 0,'level-top') ?>
 <?php if($_menu): ?>
-<div class=" bs-docs-sidebar">
-    <!--ul class="nav nav-list bs-docs-sidenav affix"-->
-    <ul class="nav nav-list bs-docs-sidenav">
-        <!--li class="nav-header"><?php echo $this->__('Browse By') ?></li-->
-        <?php echo $_menu ?>
-    </ul>
+<div class="bs-docs-sidebar">
+    <ul class="nav nav-list bs-docs-sidenav"><?php echo $_menu ?></ul>
 </div>
 <?php endif ?>
-
-<!--
-  <?php /*
-    $_ctg = getMagentoCategoriesAsFlattenArray ();
-    foreach($_ctg as $_category) {
-      echo $_category['id'] . " " . $_category['parent_id'] ."\n";
-    }
-    */
-  ?>
--->

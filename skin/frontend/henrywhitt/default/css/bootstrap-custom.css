@@ -1,4 +1,14 @@
-  .main.container {margin-top: 60px;}
+.item .thumbnail:hover {
+  border-color: #0088cc;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+     -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+          box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+  cursor: pointer;
+}
+
+
+
+.main.container {margin-top: 60px;}
 
 .products-grid .item { font-size: 12px; line-height: 1.2em; }
 .products-grid .item hr { margin: 0px 0; }
@@ -157,6 +167,12 @@ hr.soften {
           box-shadow: inset 0 2px 4px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
 }
 
+
+/* Category Image
+------------------------- */
+.category-image img {
+  width: 100%;
+}
 
 /* Pattern overlay
 ------------------------- */
@@ -512,6 +528,15 @@ h2 + .row {
   margin-bottom: 9px;
 }
 
+.breadcrumb li a {
+  text-shadow: none;
+}
+.breadcrumb.fixed {
+  padding: 0;
+  margin-left: 10px;
+}
+
+
 /* Icons
 ------------------------- */
 .the-icons {
@@ -605,8 +630,7 @@ h2 + .row {
 }
 
 .bs-docs-sidenav {
-  width: 228px;
-  margin: 0 0 10px 10px;
+  margin: 0 0 10px 0;
   padding: 0;
   background-color: #fff;
   -webkit-border-radius: 6px;
@@ -633,6 +657,7 @@ h2 + .row {
      -moz-border-radius: 0 0 6px 6px;
           border-radius: 0 0 6px 6px;
 }
+
 .bs-docs-sidenav > .active > a {
   position: relative;
   z-index: 2;
@@ -655,8 +680,8 @@ h2 + .row {
 }
 .bs-docs-sidenav > li > a:hover {
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
-  border-left:  1px solid transparent;
-  border-right: 1px solid transparent;
+  border-left:  1px solid #eee;
+  border-right: 1px solid #eee;
   background-color: #f5f5f5;
 }
 .bs-docs-sidenav > li.active > a:hover {
@@ -671,21 +696,6 @@ h2 + .row {
 .bs-docs-sidenav a:hover .icon-chevron-right {
   opacity: .5;
 }
-.bs-docs-sidenav .active .icon-chevron-right,
-.bs-docs-sidenav .active a:hover .icon-chevron-right {
-  background-image: url(../img/glyphicons-halflings-white.png);
-  opacity: 1;
-}
-.bs-docs-sidenav.affix {
-  top: 40px;
-}
-.bs-docs-sidenav.affix-bottom {
-  position: absolute;
-  top: auto;
-  bottom: 270px;
-}
-
-
 
 
 /* Responsive
@@ -696,9 +706,6 @@ h2 + .row {
 @media (min-width: 1200px) {
   .bs-docs-container {
     max-width: 970px;
-  }
-  .bs-docs-sidenav {
-    width: 258px;
   }
 }
 

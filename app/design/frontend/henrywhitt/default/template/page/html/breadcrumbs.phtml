@@ -12,13 +12,14 @@
 
 <?php if($crumbs && is_array($crumbs)): ?>
 <div class="breadcrumbs subnav">
-    <ul class="nav nav-pills"> 
+    <ul class="breadcrumb"> 
         <?php foreach($crumbs as $_crumbName=>$_crumbInfo): ?>
             <?php if($_crumbInfo['link']): ?>
                 <li class="<?php echo $_crumbName ?>">
                   <a href="<?php echo $_crumbInfo['link'] ?>" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>">
                     <?php if($_crumbInfo['first']):?><span class="icon-home"></span><?php else: ?><?php echo $this->htmlEscape($_crumbInfo['label']) ?><?php endif; ?>
                   </a>
+                  <span class="divider"> /</span>
                 </li>
                 <?php elseif($_crumbInfo['last']): ?>
                   <li class="<?php echo $_crumbName ?> active"><a href="#" title="<?php echo $this->htmlEscape($_crumbInfo['title']) ?>"><?php echo $this->htmlEscape($_crumbInfo['label']) ?></a></li>
@@ -26,11 +27,15 @@
                 <?php echo $this->htmlEscape($_crumbInfo['label']) ?>
             <?php endif; ?>
         <?php endforeach; ?>
-        
-        <?php echo $this->getChildHtml('catalog.leftnav.breadcrumbs') ?>
-        
     </ul>
-    
+    <?php $_fiter = $this->getChildHtml('catalog.leftnav.breadcrumbs');
+          if( count($_fiter)>0 ):
+     ?>
+    <ul class="nav nav-pills breadcrumb filterset">
+        <li><a href="#"><i class="icon-tags"></i></a></li>
+        <?php echo $_filter ?>
+    </ul>
+    <?php endif; ?>
 </div>
 <?php endif; ?>
 

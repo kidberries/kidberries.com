@@ -10,13 +10,14 @@
       $('#grid-system').tooltip({
           selector: '.show-grid > div'
         , title: function () { return $(this).width() + 'px' }
-      })
+      });
+
     }
 
     // fix sub nav on scroll
     var $win = $(window)
-      , $nav = $('.subnav')
-      , navTop = $('.subnav').length && $('.subnav').offset().top - 40
+      , $nav = $('.filterset')
+      , navTop = $('.filterset').length && $('.filterset').offset().top - 20
       , isFixed = 0
 
     processScroll()
@@ -31,11 +32,14 @@
     function processScroll() {
       var i, scrollTop = $win.scrollTop()
       if (scrollTop >= navTop && !isFixed) {
-        isFixed = 1
-        $nav.addClass('subnav-fixed')
+        isFixed = $nav.parent();
+        $nav.wrap('<div class="navbar-fixed-top"><div class="navbar-inner" style="height: 40px;"><div class="container"><div class="nav-collapse"/></div></div></div>')
+        $nav.addClass('fixed');
       } else if (scrollTop <= navTop && isFixed) {
-        isFixed = 0
-        $nav.removeClass('subnav-fixed')
+        isFixed.empty();
+        $nav.remove('fixed');
+        isFixed.append( $nav );
+        isFixed = undefined;
       }
     }
   })
