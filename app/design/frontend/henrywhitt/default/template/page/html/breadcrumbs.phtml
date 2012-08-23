@@ -29,10 +29,10 @@
         <?php endforeach; ?>
     </ul>
     <?php $_fiter = $this->getChildHtml('catalog.leftnav.breadcrumbs');
-          if( count($_fiter)>0 ):
+          if( $_fiter ):
      ?>
     <ul class="nav nav-pills breadcrumb filterset">
-        <li><a href="#"><i class="icon-tags"></i></a></li>
+        <li><a href="#"><i class="icon-filter"></i></a></li>
         <?php echo $_filter ?>
     </ul>
     <?php endif; ?>
