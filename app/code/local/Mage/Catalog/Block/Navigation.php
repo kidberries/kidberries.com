@@ -252,7 +252,7 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
         }
         $linkClass = '';
         if ($isOutermost && $outermostItemClass) {
-            $classes[] = $outermostItemClass . '99';
+            $classes[] = $outermostItemClass;
             $linkClass = ' class="'.$outermostItemClass.'"';
         }
         if ($isFirst) {
@@ -307,7 +307,7 @@ class Mage_Catalog_Block_Navigation extends Mage_Core_Block_Template
             if ($childrenWrapClass) {
                 $html[] = '<div class="' . $childrenWrapClass . '">';
             }
-            $html[] = '<ul class="level' . $level . '">';
+            $html[] = '<ul class="level' . $level . ' dropdown-menu">';
             $html[] = $htmlChildren;
             $html[] = '</ul>';
             if ($childrenWrapClass) {

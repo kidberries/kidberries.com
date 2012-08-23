@@ -48,6 +48,7 @@ Default layout, loads most of the pages
 
                 <action method="addItem"><type>skin_css</type><name>css/bootstrap.css</name></action>
                 <action method="addItem"><type>skin_css</type><name>css/bootstrap-custom.css</name></action>
+                <action method="addItem"><type>skin_js</type><name>js/jquery.js</name></action>
                 <!--action method="addItem"><type>skin_css</type><name>css/bootstrap-responsive.css</name></action-->
 
                 <!--action method="addItem"><type>skin_css</type><name>css/docs.css</name></action>
