@@ -28,8 +28,8 @@
             <?php endif; ?>
         <?php endforeach; ?>
     </ul>
-    <?php $_fiter = $this->getChildHtml('catalog.leftnav.breadcrumbs');
-          if( $_fiter ):
+    <?php $_filter = $this->getChildHtml('catalog.leftnav.breadcrumbs');
+          if( preg_match('/[a-z0-9]/', $_filter ) ):
      ?>
     <ul class="nav nav-pills breadcrumb filterset">
         <li><a href="#"><i class="icon-filter"></i></a></li>
