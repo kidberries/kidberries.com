@@ -41,9 +41,17 @@
         <?php endif ?>
           <li class="item <?php echo $span;  if(($i-1)%$_columnCount==0): ?> first<?php elseif($i%$_columnCount==0): ?> last<?php endif; ?> ">
             <div class="thumbnail">
-              <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>">
-                <img class="" src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(300); ?>" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
-              </a>
+              <?php
+                $_images = Mage::getModel('catalog/product')->load( $_product->getId() )->getMediaGalleryImages();
+                $_collection = "";
+                $i = 0;
+                foreach( $_images as $_image) {
+                  $_collection = '<a href="'. $_product->getProductUrl() .'" title="'. $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) .'">
+                    <img class="pic'. (($i++ == 0) ? ' last' : '') .'" src="'. $this->helper('catalog/image')->init( $_product, 'thumbnail', $_image->getFile() )->resize(300) .'" alt="'. $this->htmlEscape( $_image->getLabel() ) .'" />
+                  </a>' . $_collection;
+                }
+                echo $_collection;
+              ?>
               <div class="description">
                 <p><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></p>
                 <p><strong>1950 руб.</strong></p>
