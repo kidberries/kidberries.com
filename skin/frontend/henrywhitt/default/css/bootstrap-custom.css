@@ -702,6 +702,11 @@ h2 + .row {
   .bs-docs-container {
     max-width: 970px;
   }
+
+
+  #newsletter-validate-detail {
+    padding: 5px 15px;
+  }
 }
 
 /* Desktop
@@ -727,6 +732,10 @@ h2 + .row {
     margin-top: 30px;
     margin-right: 0;
   }
+
+  #newsletter-validate-detail {
+    padding: 5px;
+  }
 }
 
 /* Tablet to desktop
@@ -748,6 +757,7 @@ h2 + .row {
   .bs-docs-sidenav.affix {
     top: 0;
   }
+
 }
 
 /* Tablet
@@ -889,11 +899,6 @@ h2 + .row {
           box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   cursor: pointer;
 }
-
-#newsletter-validate-detail {
-  padding: 5px;
-}
-
 
 
 .bs-docs-sidenav > li > a:hover,
