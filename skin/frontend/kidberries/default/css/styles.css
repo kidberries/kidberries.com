@@ -512,7 +512,7 @@ tr.summary-details-excluded { font-style:italic; }
 .header .image .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header .image h1.logo { margin:0; padding:0; }
 
-.header .phone {color: #dfdfdf; padding-top: 44px; padding-left: 290px; font-family: Calibri; }
+.header .phone {color: #dfdfdf; padding-top: 44px; padding-left: 130px; font-family: Calibri; }
 .header .phone div{ display:block; float:none; margin-left: 40px; }
 .header .phone .label{ font-size: 13px; margin-bottom: 2px;}
 .header .phone .number{ font-size: 31px; font-weight: bold; }
@@ -1154,7 +1154,7 @@ table.add-to-box  {width: 100%}
 .product-view .product-shop table td .no-rating {padding:2px; margin: 0; text-align: right;}
 .product-view .product-shop table td .add-to-links li {padding:2px; text-align: right;}
 
-.product-view .product-shop .product-name {padding-top: 15px; padding-left: 20px; font-size: 1.5em;}
+.product-view .product-shop .product-name {padding-top: 15px; padding-left: 20px; font-size: 1.5em; width: 320px;}
 .product-view .product-shop .product-sku  {padding-top: 5px; font-size: 12px;}
 .product-view .product-shop .price-cont {text-align: right;}
 .product-view .product-shop .splitter {height: 20px;}
@@ -1701,7 +1701,7 @@ table.add-to-box  {width: 100%}
 
 /* Footer ================================================================================ */
 .footer { padding:35px 0 40px; }
-.footer div.links-block { margin-left: 300px;}
+.footer div.links-block { margin-left: 337px;}
 .footer ul {float:left; margin-bottom:10px;}
 .footer ul li { float:left; padding-right:16px; }
 .footer ul li a{color:#BF1357; text-decoration:none;}
