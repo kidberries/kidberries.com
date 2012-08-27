@@ -13,7 +13,7 @@
   $attributeSet = Mage::getModel('eav/entity_attribute_set')->load( $_product->getAttributeSetId() );
   $attributeSetName = $attributeSet->getAttributeSetName();
   if ($_product->getTypeId() == 'configurable' && 
-   ! preg_match('/(Charles Tyrwhitt|COSILANA|ENGEL)/i', $attributeSetName)): ?> 
+   ! preg_match('/(Charles Tyrwhitt|COSILANA|ENGEL|jojo)/i', $attributeSetName)): ?> 
 <script type="text/javascript">
   jQuery(document).ready(function(){
      jQuery('#product-options-wrapper, div.product-options-bottom').hide();
