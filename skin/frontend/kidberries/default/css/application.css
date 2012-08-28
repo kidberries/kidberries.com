@@ -1,0 +1,5 @@
+
+.box-collateral .box-description .std ol li, .box-collateral .box-description .std ul li, {
+  margin: 5px 20px 10px;
+  list-style: inherit;
+}
